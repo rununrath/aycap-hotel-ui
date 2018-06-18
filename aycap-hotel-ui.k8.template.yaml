@@ -1,0 +1,40 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  namespace: aycap
+  name: aycap-hotel-ui
+  labels:
+    app: aycap-hotel-ui
+    type: jenkins-build
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: aycap-hotel-ui
+    spec:
+      containers:
+      - name: aycap-hotel-ui
+        image: <%= new_image %>
+        env:
+          - name: HOTELS_REST_URL
+            value: http://aycap-spring-rest:8090/example/v1/hotels
+      imagePullSecrets:
+      - name: admin.regkey
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: aycap
+  name: aycap-hotel-ui
+  labels:
+    app: aycap-hotel-ui
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+  selector:
+    app: aycap-hotel-ui
