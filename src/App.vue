@@ -8,7 +8,7 @@
             <v-toolbar-title class="white--text">Hotels</v-toolbar-title>
             <v-spacer></v-spacer>            
             <div class="white--text">
-              (JVM: {{ jvmVersion }}, REST API Version 20180618: {{ apiVersion }})
+              (JVM: {{ jvmVersion }}, REST API Version Sompob: {{ apiVersion }})
             </div>
             <v-spacer></v-spacer>
 
