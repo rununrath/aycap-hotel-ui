@@ -4,7 +4,7 @@ const router = express.Router()
 // const moment = require('moment')
 // const _ = require('lodash')
 
-const HOTELS_REST_URL = process.env.HOTELS_REST_URL || "http://192.168.64.244:30546/example/v1/hotels"
+const HOTELS_REST_URL = process.env.HOTELS_REST_URL || "http://ec2-13-228-227-224.ap-southeast-1.compute.amazonaws.com:30711/example/v1/hotels"
 router.post('/hotels', (req, res) => {
   superagent.get(HOTELS_REST_URL).then( hotelResp => {
     res.json(hotelResp.body)
