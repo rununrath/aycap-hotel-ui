@@ -37,8 +37,7 @@
       <configVersion>2</configVersion>
       <userRemoteConfigs>
         <hudson.plugins.git.UserRemoteConfig>
-          <url>http://aycap-gitlab-gitlab-ce/aycap/aycap-hotel-ui.git</url>
-          <credentialsId>gitlab-aycap-password</credentialsId>
+          <url>https://github.com/rununrath/aycap-hotel-ui.git</url>
         </hudson.plugins.git.UserRemoteConfig>
       </userRemoteConfigs>
       <branches>
