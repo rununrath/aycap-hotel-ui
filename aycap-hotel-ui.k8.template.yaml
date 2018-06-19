@@ -18,7 +18,7 @@ spec:
         image: <%= new_image %>
         env:
           - name: HOTELS_REST_URL
-            value: http://ec2-13-228-227-224.ap-southeast-1.compute.amazonaws.com:30711/example/v1/hotels
+            value: http://aycap-spring-rest:8090/example/v1/hotels
       imagePullSecrets:
       - name: admin.regkey
 ---
